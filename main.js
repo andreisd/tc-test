@@ -29,6 +29,8 @@ const updateSelectedChallenges = () => {
     const challengeTitle = challenge.querySelector(".clg-card__content__title").innerText;
     const challengePrice = challenge.querySelector(".clg-card__content__price__value").innerText;
 
+    // add the challenge to the selected challenges list (title + price)
+
     selectedChallengesContainer.innerHTML += `
       <div class="clg-selected-list__item">
         <span>${challengeTitle} - $${challengePrice}</span>
@@ -40,6 +42,7 @@ const updateSelectedChallenges = () => {
   totalCostContainer.innerText = ""; // make sure the total cost is empty before updating it
   totalCostContainer.innerText = totalCost.toFixed(2);
 
+  // show/hide the selected challenges bar based on the number of selected challenges
   selectedChallenges.size === 0
     ? selectedChallengesBar.classList.add("hide")
     : selectedChallengesBar.classList.remove("hide");
@@ -48,6 +51,8 @@ const updateSelectedChallenges = () => {
 allChallenges.forEach((challenge) => {
   const addButton = challenge.querySelector(".btn-add");
   const removeButton = challenge.querySelector(".btn-remove");
+
+  // handle click events on add/remove buttons
 
   addButton.addEventListener("click", () => {
     handleChallenge(challenge, "add");
