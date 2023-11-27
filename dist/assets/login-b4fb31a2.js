@@ -1,0 +1,1 @@
+import"./main-786ab181.js";const r=document.querySelectorAll(".os-list__item"),l=document.querySelector(".os-total__price__value");let e=0;r.forEach(t=>{const o=t.querySelector(".os-list__item__price__value").innerText;e+=parseFloat(o)});l.innerText=e.toFixed(2);

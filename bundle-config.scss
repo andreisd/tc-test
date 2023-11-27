@@ -1,0 +1,160 @@
+/* Challenges */
+
+.clg {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &-title {
+    text-align: center;
+  }
+
+  &-sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    column-gap: 10px;
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    select {
+      border: 1px solid var(--lightgrey);
+      padding: 13px 15px;
+      border-radius: 5px;
+      min-width: 197px;
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    padding-top: 60px;
+    align-items: stretch;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+
+    &__image {
+      max-width: 90%;
+      margin-top: -40px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #000000 0%,
+        rgba(0, 0, 0, 0.416667) 41.67%,
+        rgba(0, 0, 0, 0) 100%
+      );
+
+      img {
+        max-height: 185px;
+      }
+    }
+
+    &__content {
+      padding-bottom: 16px;
+      width: 90%;
+
+      &__title {
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      &__distance {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15px;
+        margin-bottom: 5px;
+      }
+
+      &__description {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      &__price {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+/* Summary Fixed Bar */
+
+.clg-summary {
+  position: fixed;
+  background-color: black;
+  border-top: 2px solid var(--gold);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 0;
+  z-index: 2;
+  color: white;
+  font-size: 18px;
+  line-height: 26px;
+
+  &.hide {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .clg-selected-total__price {
+    margin-bottom: 10px;
+
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+}

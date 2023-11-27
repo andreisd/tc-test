@@ -1,0 +1,172 @@
+/* Global */
+
+:root {
+  --gold: #e0c26b;
+  --lightgrey: #bdbdbd;
+  --darkgrey: #262626;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1130px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a.btn {
+  display: block;
+  padding: 9px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+  cursor: pointer;
+
+  &.hide {
+    display: none;
+  }
+
+  &.btn-gold {
+    background-color: var(--gold);
+    color: black;
+  }
+
+  &.btn-black {
+    background-color: black;
+    color: white;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--gold);
+        color: black;
+      }
+    }
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+
+    @media (hover: hover) {
+      &:hover {
+        border: 1px solid red;
+        color: red;
+      }
+    }
+  }
+}
+
+/* Header */
+
+.header {
+  &-topbar {
+    background-color: var(--gold);
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    padding: 11px 0;
+    font-weight: 500;
+
+    @media (max-width: 767px) {
+      font-size: 0;
+    }
+  }
+
+  &-main {
+    background-color: black;
+
+    .container {
+      position: relative;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    left: 0;
+    top: -36px;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      top: -22px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 22px 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      column-gap: 35px;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+
+.footer {
+  &-newsletter {
+    background-color: var(--darkgrey);
+    color: white;
+    height: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  &-main {
+    background-color: black;
+    padding: 40px 0;
+    min-height: 200px;
+  }
+}

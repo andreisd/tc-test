@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bundle Configurator</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header">
+      <!--Header Topbar-->
+      <div class="header-topbar">
+        <div class="container">THE LORD OF THE RINGS Virtual Challenges are HERE!</div>
+      </div>
+      <!--Header Main-->
+      <div class="header-main">
+        <div class="container">
+          <!--Logo-->
+          <div class="header-logo">
+            <a href="/"><img src="logo.svg" alt="logo" /></a>
+          </div>
+          <!--Nav-->
+          <div class="header-nav">
+            <nav>
+              <ul>
+                <li><a href="#">Challenges</a></li>
+                <li><a href="#">LOTR</a></li>
+                <li><a href="#">Merch</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Corporate</a></li>
+                <li><a href="#">Shop</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main class="main">
+      <div class="container">
+        <section class="clg">
+          <!--Title-->
+          <h1 class="clg-title">All challenges</h1>
+
+          <!--Sort-->
+          <div class="clg-sort">
+            Sort by:
+            <select name="sort" id="sort">
+              <option value="popular" selected>Popular</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="longest">Longest</option>
+              <option value="shortest">Shortest</option>
+            </select>
+          </div>
+
+          <!--Challenges-->
+          <div class="clg-cards">
+            <!--Challenge Card KJ-->
+            <div
+              id="clg-kj"
+              class="clg-card"
+              style="
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 18%,
+                    rgb(255, 255, 255) 28%
+                  ),
+                  url('KJ.png');
+              "
+            >
+              <div class="clg-card__image">
+                <img src="KJ-badge.png" alt="Mount Kilimanjaro" />
+              </div>
+              <div class="clg-card__content">
+                <div class="clg-card__content__title">Mount Kilimanjaro</div>
+                <div class="clg-card__content__price">
+                  $<span class="clg-card__content__price__value">39.95</span>
+                </div>
+                <div class="clg-card__content__distance">60 mi / 97 km</div>
+                <ul class="clg-card__content__description">
+                  <li>5 Virtual Postcards</li>
+                  <li>No StreetView</li>
+                </ul>
+                <div class="clg-card__content__buttons">
+                  <a class="btn btn-black btn-add">Add challenge</a>
+                  <a class="btn btn-outline btn-remove hide">Remove</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Challenge Card AW-->
+            <div
+              id="clg-aw"
+              class="clg-card"
+              style="
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 18%,
+                    rgb(255, 255, 255) 28%
+                  ),
+                  url('AW.png');
+              "
+            >
+              <div class="clg-card__image">
+                <img src="AW-badge.png" alt="Angkor Wat" />
+              </div>
+              <div class="clg-card__content">
+                <div class="clg-card__content__title">Angkor Wat</div>
+                <div class="clg-card__content__price">
+                  $<span class="clg-card__content__price__value">29.95</span>
+                </div>
+                <div class="clg-card__content__distance">20 mi / 32 km</div>
+                <ul class="clg-card__content__description">
+                  <li>4 Virtual Postcards</li>
+                  <li>Has StreetView</li>
+                </ul>
+                <div class="clg-card__content__buttons">
+                  <a class="btn btn-black btn-add">Add challenge</a>
+                  <a class="btn btn-outline btn-remove hide">Remove</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Challenge Card IT-->
+            <div
+              id="clg-it"
+              class="clg-card"
+              style="
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 18%,
+                    rgb(255, 255, 255) 28%
+                  ),
+                  url('IT.png');
+              "
+            >
+              <div class="clg-card__image">
+                <img src="IT-badge.png" alt="Inca Trail" />
+              </div>
+              <div class="clg-card__content">
+                <div class="clg-card__content__title">Inca Trail</div>
+                <div class="clg-card__content__price">
+                  $<span class="clg-card__content__price__value">29.95</span>
+                </div>
+                <div class="clg-card__content__distance">26 mi / 42 km</div>
+                <ul class="clg-card__content__description">
+                  <li>4 Virtual Postcards</li>
+                  <li>Has StreetView</li>
+                </ul>
+                <div class="clg-card__content__buttons">
+                  <a class="btn btn-black btn-add">Add challenge</a>
+                  <a class="btn btn-outline btn-remove hide">Remove</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Challenge Card BW-->
+            <div
+              id="clg-bw"
+              class="clg-card"
+              style="
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 18%,
+                    rgb(255, 255, 255) 28%
+                  ),
+                  url('BW.png');
+              "
+            >
+              <div class="clg-card__image">
+                <img src="BW-badge.png" alt="Berlin Wall" />
+              </div>
+              <div class="clg-card__content">
+                <div class="clg-card__content__title">Berlin Wall</div>
+                <div class="clg-card__content__price">
+                  $<span class="clg-card__content__price__value">29.95</span>
+                </div>
+                <div class="clg-card__content__distance">30 mi / 48 km</div>
+                <ul class="clg-card__content__description">
+                  <li>5 Virtual Postcards</li>
+                  <li>Has StreetView</li>
+                </ul>
+                <div class="clg-card__content__buttons">
+                  <a class="btn btn-black btn-add">Add challenge</a>
+                  <a class="btn btn-outline btn-remove hide">Remove</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Summary Fixed Bottom Bar-->
+    <div class="clg-summary hide">
+      <div class="container">
+        <div class="clg-selected-list"></div>
+        <div class="clg-selected-summary">
+          <div class="clg-selected-total__price">
+            Total $<span class="clg-selected-total__price__value">0</span>
+          </div>
+          <a class="btn btn-gold" href="/order-summary/">Order Summary</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer-newsletter">Get notified when we release a new challenge -></div>
+      <div class="footer-main">
+        <div class="container">
+          <div class="footer-logo">
+            <img src="logo_white.svg" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Scripts-->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
